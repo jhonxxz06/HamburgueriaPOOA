@@ -1,5 +1,6 @@
 package modelo;
 
+import observador.ObservadorPedido;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,6 +10,7 @@ public class Pedido {
     String observacoes;
     double valorEntrega;
     StatusPedido status;
+    private List<ObservadorPedido> observadores = new ArrayList<>();
 
     public Pedido(List<ItemCardapio> itens, String endereco, String observacoes, double valorEntrega) {
         this.itens = new ArrayList<>(itens);
@@ -17,6 +19,26 @@ public class Pedido {
         this.valorEntrega = valorEntrega;
         this.status = StatusPedido.RECEBIDO;
     }
+
+    public void adicionarObservador(ObservadorPedido observador) {
+        this.observadores.add(observador);
+    }
+
+    public void setStatus(StatusPedido novoStatus) {
+      this.status = novoStatus;
+      notificarObservadores();
+    }
+
+    private void notificarObservadores() {
+      for (ObservadorPedido obs : observadores) {
+        obs.atualizar(this);
+      }
+    }
+
+    public StatusPedido getStatus() {
+      return status;
+    }
+
     public double valorTotalPedido(){
         double total = valorEntrega;
         for (ItemCardapio item : itens) {
