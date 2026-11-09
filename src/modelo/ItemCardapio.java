@@ -4,7 +4,7 @@ public abstract class ItemCardapio {
    protected String nomeItemCardapio;
    protected double pesoItem;
    protected double precoItem; // usar o locale do java
-   int quantidade;
+   protected  int quantidade = 1;
 
     public String getNomeItemCardapio() {
         return nomeItemCardapio;
@@ -31,7 +31,7 @@ public abstract class ItemCardapio {
     }
 
     public String getDescricao() {
-        return nomeItemCardapio;
+        return getNomeItemCardapio();
     }
 
     public int getQuantidade() {

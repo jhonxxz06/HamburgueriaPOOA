@@ -5,12 +5,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Pedido {
-    List<ItemCardapio> itens;
-    String endereco;
-    String observacoes;
-    double valorEntrega;
-    StatusPedido status;
-    private List<ObservadorPedido> observadores = new ArrayList<>();
+   private List<ItemCardapio> itens;
+   private String endereco;
+   private String observacoes;
+   private double valorEntrega;
+   private StatusPedido status;
+   private List<ObservadorPedido> observadores = new ArrayList<>();
 
     public Pedido(List<ItemCardapio> itens, String endereco, String observacoes, double valorEntrega) {
         this.itens = new ArrayList<>(itens);
