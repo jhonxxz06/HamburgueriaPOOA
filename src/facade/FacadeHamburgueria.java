@@ -7,7 +7,7 @@ import construtor.BuilderSobremesa;
 import decorador.ExtraBacon;
 import decorador.ExtraQueijo;
 import fabrica.FabricaDeBebida;
-import fabrica.FabricaDeLanche;
+import fabrica.FabricaDeHamburguer;
 import fabrica.FabricaDeSobremesa;
 import modelo.ItemCardapio;
 import modelo.Pedido;
@@ -23,7 +23,7 @@ public class FacadeHamburgueria {
 
     private static final double VALOR_ENTREGA = 5.0;
 
-    private final FabricaDeLanche fabricaLanche = new FabricaDeLanche();
+    private final FabricaDeHamburguer fabricaDeHamburguer = new FabricaDeHamburguer();
     private final FabricaDeBebida fabricaBebida = new FabricaDeBebida();
     private final FabricaDeSobremesa fabricaSobremesa = new FabricaDeSobremesa();
 
@@ -37,7 +37,7 @@ public class FacadeHamburgueria {
         exigirQuantidade(quantidade);
         iniciarNovoPedidoSeAnteriorPago(); // MUDANÇA: descarta o pedido anterior já pago ao iniciar um novo
 
-        ItemCardapio lanche = fabricaLanche.criarItem(nomeLanche, opcoes);
+        ItemCardapio lanche = fabricaDeHamburguer.criarItem(nomeLanche, opcoes);
         lanche.setQuantidade(quantidade);
         if (comQueijo) {
             lanche = new ExtraQueijo(lanche);

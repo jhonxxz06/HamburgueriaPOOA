@@ -4,7 +4,7 @@ import construtor.BuilderHamburguer;
 import modelo.ItemCardapio;
 import modelo.Hamburguer;
 
-public class FabricaDeLanche extends FabricaItemCardapio<BuilderHamburguer> {
+public class FabricaDeHamburguer extends FabricaItemCardapio<BuilderHamburguer> {
 
     @Override
     protected ItemCardapio instanciarItem(String nomeItemCardapio, BuilderHamburguer builderHamburguer) {
