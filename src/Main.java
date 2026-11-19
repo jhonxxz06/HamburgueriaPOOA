@@ -62,7 +62,7 @@ public class Main {
         }
     }
 
-    // MUDANÇA: Pergunta qual lanche base o cliente quer antes de montar os ingredientes.
+
     private static void montarLanche() {
         String nomeLanche = escolherTexto("Escolha o lanche:", new String[]{
                 "X-Burger", "X-Salada", "X-Tudo"
@@ -92,7 +92,7 @@ public class Main {
         System.out.println(nomeLanche + " adicionado!");
     }
 
-    // MUDANÇA: Pergunta qual bebida base o cliente quer antes de escolher tamanho/marca/sabor.
+
     private static void montarBebida() {
         String nomeBebida = escolherTexto("Escolha a bebida:", new String[]{
                 "Refrigerante", "Milk-Shake", "Suco Natural", "Água"
@@ -123,7 +123,7 @@ public class Main {
         System.out.println(nomeBebida + " adicionada!");
     }
 
-    // MUDANÇA: Pergunta qual sobremesa base o cliente quer (Sorvete, Açaí ou Pizza Doce).
+
     private static void montarSobremesa() {
         String nomeSobremesa = escolherTexto("Escolha a sobremesa:", new String[]{
                 "Sorvete", "Açaí", "Pizza Doce"

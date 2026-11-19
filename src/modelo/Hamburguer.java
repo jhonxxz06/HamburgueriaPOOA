@@ -19,7 +19,7 @@ public class Hamburguer extends ItemCardapio {
         this.ketchup = ketchup;
     }
 
-    // MUDANÇA: Exibe no resumo o nome do lanche junto com o pão e a quantidade de carnes.
+
     @Override
     public String getNomeItemCardapio() {
         return super.getNomeItemCardapio() + " (" + tipoPao + ", " + quantidade_hamburgueres + " hamb.)";

@@ -89,8 +89,7 @@ public class FacadeHamburgueria {
         pago = false;
     }
 
-    // MUDANÇA: Agora valida antes de retornar o valor se há itens não finalizados
-    // ou se o pedido atual já foi pago, evitando mostrar o valor de um pedido antigo.
+
     public double getValorTotalPedido() {
         exigirPedidoDisponivelParaPagamento();
         return pedido.valorTotalPedido();
@@ -109,8 +108,7 @@ public class FacadeHamburgueria {
         }
     }
 
-    // MUDANÇA: Mantém o pedido pago visível para consulta no resumo logo após pagar,
-    // mas limpa os dados antigos assim que o primeiro item de um novo pedido é adicionado.
+
     private void iniciarNovoPedidoSeAnteriorPago() {
         if (pago) {
             pedido = null;
@@ -119,7 +117,7 @@ public class FacadeHamburgueria {
         }
     }
 
-    // MUDANÇA: Centraliza as regras de bloqueio antes de exibir valor ou processar pagamento.
+
     private void exigirPedidoDisponivelParaPagamento() {
         if (!itensEmMontagem.isEmpty()) {
             throw new IllegalStateException("Finalize o pedido na opção 4 antes de pagar.");

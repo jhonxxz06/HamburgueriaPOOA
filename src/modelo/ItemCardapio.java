@@ -3,7 +3,7 @@ package modelo;
 public abstract class ItemCardapio {
    protected String nomeItemCardapio;
    protected double pesoItem;
-   protected double precoItem; // usar o locale do java
+   protected double precoItem;
    protected  int quantidade = 1;
 
     public String getNomeItemCardapio() {

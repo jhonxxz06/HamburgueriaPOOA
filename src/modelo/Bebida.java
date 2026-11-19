@@ -19,7 +19,7 @@ public class Bebida extends ItemCardapio {
         this.quererCanudo = quererCanudo;
     }
 
-    // MUDANÇA: Exibe o tipo de bebida, marca, sabor e volume no resumo.
+
     @Override
     public String getNomeItemCardapio() {
         return super.getNomeItemCardapio() + " " + marca + " " + sabor + " (" + (int) volumeMl + "ml)";

@@ -17,7 +17,7 @@ public class Sobremesa extends ItemCardapio {
         this.temNutella = temNutella;
     }
 
-    // MUDANÇA: Exibe o nome da sobremesa, sabor, calda e adicionais no resumo.
+
     @Override
     public String getNomeItemCardapio() {
         String descricao = super.getNomeItemCardapio() + " de " + sabor + " (calda: " + saborCalda;
