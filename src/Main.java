@@ -76,8 +76,8 @@ public class Main {
         opcoes.tipoPao(pao);
 
         int carnes = escolherInteiro("Quantidade de hambúrgueres:",
-                new String[]{"1 hambúrguer", "2 hambúrgueres", "3 hambúrgueres"},
-                new int[]{1, 2, 3});
+                new String[]{"1 hambúrguer", "2 hambúrgueres", "3 hambúrgueres", "4 hambúrgueres", "5 hambúrgueres"},
+                new int[]{1, 2, 3, 4, 5});
         opcoes.quantidadeHamburguer(carnes);
 
         opcoes.temCebola(lerSimNao("Com cebola? (s/n): "));
